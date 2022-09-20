@@ -1,0 +1,453 @@
+/* ------------------------------NAV------------------------------ */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+::-moz-selection {
+	/* Code for Firefox */
+	color: white;
+	background: black;
+}
+
+::selection {
+	color: white;
+	background: black;
+}
+
+body {
+	font-family: poppins, serif;
+	font-size: calc((1vw + 16px) / 2);
+}
+
+.mainContainer {
+	font-size: 1em;
+}
+
+#navBar {
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	top: 0;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	flex-direction: row;
+	z-index: 100;
+	font-size: 1rem;
+	background-color: rgba(0, 0, 0, 0.6);
+	color: white;
+	font-size: 1.3em;
+}
+
+#navSetOne {
+	height: 100%;
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#navSetOne h3 a {
+	color: white;
+	text-decoration: none;
+}
+
+#navUl {
+	display: flex;
+	width: 38%;
+	flex-direction: row;
+	align-content: center;
+	justify-content: space-between;
+	align-items: center;
+	transition: 0.2s ease;
+
+}
+
+#navUl li {
+	list-style: none;
+}
+
+#navUl li a {
+	text-decoration: none;
+	color: white;
+	transition: 0.1s linear;
+	position: relative;
+}
+
+#navUl li a::before,
+#navUl li a::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 2px;
+	bottom: 0;
+	background-color: #F2668B;
+	transition: 0.3s linear;
+	z-index: 1;
+}
+
+#navUl li a::before {
+	left: 0;
+}
+
+#navUl li a::after {
+	right: 0;
+}
+
+#navUl li a:hover {
+	color: #F2668B;
+}
+
+#navUl li:hover a::before,
+#navUl li:hover a::after {
+	width: 50%;
+}
+
+#navToggleBtn {
+	width: 40px;
+	height: 40px;
+	flex-direction: column;
+	align-content: center;
+	justify-content: space-evenly;
+	align-items: center;
+	cursor: pointer;
+	display: none;
+	z-index: 2;
+	right: 2%;
+	top: 2%;
+	position: relative;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.navSpan {
+	width: 85%;
+	height: 5px;
+	background: white;
+	border-radius: 5px;
+	transition: 0.5s;
+}
+
+#logoImg {
+	width: 7vw;
+	border-radius: 10%;
+	border: none;
+	outline: none;
+}
+
+
+/* ---------------------------HOME--------------------------- */
+
+.banner {
+	width: 100%;
+	height: 500px;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner div {
+	height: 100%;
+}
+
+img.bannerImg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.bannerText {
+	position: absolute;
+	width: 55%;
+	z-index: 1;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+	align-items: flex-start;
+	color: white;
+}
+
+.bannerText p.bannerP1 {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	font-size: 1.5em;
+}
+
+.banner p.bannerP2 {
+	margin: 100px 0 50px;
+}
+
+.bannerText a {
+	text-decoration: none;
+	color: black;
+	border: 2px solid transparent;
+	background-color: #F2C12E;
+	padding: 10px 20px;
+	border-radius: 5px;
+	transition: 0.1s ease;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.bannerText a:hover {
+	background-color: #F2AE30;
+	border: 2px solid black;
+}
+
+
+.homeBody {
+	padding: 10px 0px;
+}
+
+.row {
+	width: 600px;
+	margin: 10px auto 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.rowImgDiv {
+	width: 100px;
+	height: 100px;
+}
+
+.rowImgDiv img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.rowTextDiv {
+	width: 450px;
+	font-size: 1.1em;
+}
+
+
+
+/* -------------------------FOOTER-------------------------- */
+
+footer.footer {
+	width: 100%;
+	padding: 30px 10px;
+	margin-top: 15px;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-start;
+	align-content: center;
+}
+
+footer.footer div {
+	width: calc(100%/3);
+}
+
+.footer h3 {
+	margin-bottom: 10px;
+}
+
+.footer p {
+	margin-bottom: 3px;
+}
+
+.footer div p:last-child {
+	margin-bottom: 0;
+}
+
+.footer p a {
+	text-decoration: none;
+	color: black;
+}
+
+.footer p a:hover {
+	color: white;
+}
+
+/* ------------------------MEDIA QUERY------------------------ */
+
+@media screen and (max-width: 768px) {
+	#navUl {
+		width: 50%;
+	}
+
+	.banner {
+		height: 450px;
+	}
+
+	.row {
+		width: 80vw;
+	}
+
+	.rowImgDiv {
+		width: 12vw;
+		height: 12vw;
+	}
+
+	.rowTextDiv {
+		width: 60vw;
+	}
+
+}
+
+
+@media screen and (max-width: 425px) {
+	#navToggleBtn {
+		display: flex;
+	}
+
+	#navBar {
+		height: 50px;
+		padding: 0 15px;
+	}
+
+	#navUl {
+		width: 150px;
+		flex-direction: column;
+		height: 100vh;
+		position: fixed;
+		right: 0;
+		top: 0;
+		background: #F2C12E;
+		padding: 25px 0;
+	}
+
+	#navUl li {
+		width: 80%;
+	}
+
+	#navUl li a {
+		color: black;
+		font-weight: 700;
+	}
+
+	/* --------BANNER-------- */
+
+	.banner {
+		height: 280px;
+	}
+
+	.bannerText {
+		width: 70%;
+	}
+
+	.bannerText a {
+		padding: 5px 10px;
+	}
+
+	.bannerText p.bannerP1 {
+		font-size: 1.3em;
+	}
+
+	.banner p.bannerP2 {
+		margin: 23px 0 35px;
+	}
+
+
+
+	/* -------HOME BODY------- */
+
+	.rowTextDiv {
+		width: 55vw;
+	}
+
+	.rowImgDiv {
+		width: 20vw;
+		height: 20vw;
+	}
+
+	/* --------FOOTER-------- */
+	footer.footer {
+		font-size: 0.7rem;
+	}
+
+	/* -----NAV HELPER CLASS----- */
+
+
+	.nbr#navToggleBtn {
+		position: relative;
+		justify-content: center;
+	}
+
+	.navDash {
+		position: absolute;
+		width: 95%;
+	}
+
+	.navDash:first-child {
+		transform: rotate(45deg);
+	}
+
+	.navDash:nth-child(2) {
+		display: none;
+	}
+
+	.navDash:last-child {
+		transform: rotate(-45deg);
+	}
+
+	.sideNavUl#navUl {
+		opacity: 0;
+		display: none;
+	}
+
+}
+
+@media screen and (max-width: 250px) {
+
+	#navBar {
+		height: 30px;
+		font-size: 1em;
+	}
+
+	#navSetOne h3 a {
+		font-size: 0.8rem;
+	}
+
+	#navToggleBtn {
+		height: 25px;
+		width: 30px;
+	}
+
+	.navSpan {
+		height: 3px;
+	}
+
+	.banner {
+		height: 165px;
+	}
+
+	.banner p.bannerP2 {
+		margin: 16px 0 12px;
+	}
+
+	.bannerText a {
+		padding: 3px 5px;
+		border-radius: 10px;
+		font-size: 0.5rem;
+	}
+
+	.bannerText p.bannerP1 {
+		font-size: 0.5rem;
+	}
+
+
+	.rowTextDiv {
+		font-size: 0.4rem;
+	}
+
+	footer.footer {
+		padding: 10px;
+		font-size: 0.5em;
+	}
+}
